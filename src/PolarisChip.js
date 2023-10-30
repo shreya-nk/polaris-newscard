@@ -17,10 +17,11 @@ export class PolarisChip extends LitElement {
 
   constructor() {
     super();
-    this.title = 'My boilerplate';
+    this.title = 'My ';
   }
 
   render() {
     return html`<span>${this.title}</span>`;
   }
 }
+
