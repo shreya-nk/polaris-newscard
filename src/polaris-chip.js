@@ -43,9 +43,28 @@ class PolarisChip extends LitElement {
         padding: 0;
         border-radius: 0px;
       }
-      `;
-    }
-  
+    
+
+      .month{
+        display: block;
+        background: #1E407C;
+        border-radius: 0 0 2px 2px;
+        color: #FFF;
+        font-size: 0.8em;
+        font-weight: bold;
+        line-height: 1.8;
+        text-transform: uppercase;
+}
+      .day{
+        background: #f7f7f7;
+        border-radius: 2px 2px 0 0;
+        color: #444;
+        display: block;
+        font-size: 18px;
+        font-weight: 900;
+        padding: 10px 20px;
+        }
+   `;
     constructor() {
       super();
       this.image = " ";
@@ -67,8 +86,8 @@ class PolarisChip extends LitElement {
           </div> <!-- pic -->
           <div class="top">
             <div class="date">
-                <span class="month"> "${this.month}" </span>
-                <span class="day"> "${this.day}" </span>
+                <div class="month"> <slot> "${this.month}" </slot> </label>
+                <div class="day"> <slot> "${this.day}" </slot> </label>
             </div> <!-- date -->
             <div class="title"> 
               <a href="${this.link}"> "${this.title}" </a>
