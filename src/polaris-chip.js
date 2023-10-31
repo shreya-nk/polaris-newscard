@@ -22,22 +22,20 @@ class PolarisChip extends LitElement {
         background-color: #fff;
         display:inline-block;
         max-width: 400px; 
-        width: 100%; 
-        padding: 20px; 
-        border: 1px solid #ccc;
-        text-align: center;
-        position: relative;
-        margin-bottom: 200px;
+        width: 400px; 
+        height: 400 px; 
+        
       }
+     
 
-      .image {
+      .pic {
         background-color: #005fa9;
         height: 171px;
       }
-      .image img:hover {
+      .pic img:hover {
         opacity: 0.7;
       }
-      .image {
+      .pic {
         position: relative;
         width: 90%;
         height: 90%;
@@ -62,7 +60,7 @@ class PolarisChip extends LitElement {
     render() {
       return html`
         <div class="container">
-          <div class="pic"></div>
+          <div class="pic">
             <a href="${this.link}">
               <img src="${this.image}" width="386" height="171"/>
             </a>
@@ -77,7 +75,7 @@ class PolarisChip extends LitElement {
             </div>
           </div> <!-- top -->
           <div class="description"> 
-            <p> ${this.description} </p>
+            <p> <slot></slot>${this.description}</slot></p>
           </div> <!-- description -->
         </div> <!-- container -->
         `;
